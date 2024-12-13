@@ -1,0 +1,175 @@
+/* Variables de color */
+:root { 
+  --white: #ffffff;
+  --pink: #F2295F;
+  --morado: #6404A5;
+  --azul: #9CAAF1; 
+  --black: #130f40;
+  --amarillo:#F2E205;
+  --light-color: #666;
+  --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+  --border: .2rem solid rgba(0, 0, 0, .1);
+  --outline: .1rem solid rgba(0, 0, 0, .1);
+  --outline-hover: .2rem solid var(--black);
+}
+/* Reset */
+body {
+  margin: 0;
+  background-color: var(--light-color);
+}
+
+/* Header principal */
+.header {
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Sombra agregada */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+
+/* Logo y título */
+.logo-section {
+  display: flex;
+  flex-direction: column;    
+  width: 100%; /* Ocupa todo el ancho */
+  justify-content: space-between; /* Espaciado entre logo y los íconos interactivos */
+  
+}
+
+.logo-section-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;                  /* Ancho del logo */
+  height: auto; 
+}
+
+.logo-section h1 {
+  font-size: 24px;
+  font-family: 'fuenteencabezado';
+  
+}
+.color1 { color: var(--pink); }
+.color2 { color:var(--pink) }
+.color3 { color:var(--pink); }
+.color4 { color:var(--amarillo); }
+.color5 { color: var(--amarillo); }
+.color6 { color: var(--amarillo); }
+.color7 { color: var(--amarillo); }
+.color8 { color: var(--amarillo); }
+
+
+/* Iconos individuales */
+/* Contenedor principal de los íconos y la barra de búsqueda */
+.icons {
+  display: flex;
+  align-items: center; /* Alineación vertical */
+  gap: 15px;
+  justify-content: end;
+}
+.icons i {
+  font-size: 1.2rem; /* Tamaño de los íconos */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: var(--pink);
+}
+.icon:hover{
+  transform: scale(1.4);
+}
+.icon i:hover {
+  color: var(--azul);
+}
+
+/* Contenedor de la caja de búsqueda */
+.search-box {
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  background-color: #f7f7f7; /* Fondo claro */
+  border: none; /* Sin borde visible */
+  border-radius: 50px; /* Bordes redondeados */
+  padding: 10px 28px; /* Espaciado interno */
+  width: 500px; /* Ancho de la barra de búsqueda */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Campo de entrada */
+.search-box input {
+  border: none; /* Sin borde */
+  outline: none; /* Sin contorno al seleccionar */
+  background: transparent; /* Fondo transparente */
+  font-size: 0.8rem; /* Tamaño del texto */
+  color: #434343; /* Color del texto */
+  flex: 1; /* Ocupa el espacio restante */
+  font-family: "fuentetexto";
+}
+
+/* Placeholder personalizado */
+.search-box input::placeholder {
+  color: #8f8f8f; /* Color del placeholder */
+  font-style: italic; /* Estilo del texto */
+}
+
+/* Ícono de búsqueda */
+.search-box .search-btn {
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  color: #333; /* Color del ícono */
+  font-size: 1.2rem; /* Tamaño del ícono */
+  font-family: "fuentetexto";
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Menú de navegación */
+.navbar {
+  text-align: start; /* Centra el menú horizontalmente */
+  width: 100%;
+  margin: 15px 0;
+}
+
+.navbar ul {
+  display: inline-flex; /* Muestra los ítems horizontalmente */
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color:var(--morado);
+  font-weight: bold;
+  transition: color 0.3s ease;
+  
+}
+
+.navbar a:hover {
+  color:var(--amarillo);
+}
+
+/* Redes sociales */
+.social-icons {
+  display: flex;
+  justify-content: end; /* Alinea las redes sociales al extremo derecho */
+  gap: 10px;
+  width: 100%; /* Se asegura de ocupar todo el ancho */
+  margin-top: 10px; /* Espaciado con el resto de los elementos */
+}
+
+.social-icons .icon i {
+  font-size: 18px;
+  color: var(--azul);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons .icon:hover i {
+  color:  var(--pink);
+  transform: scale(1.2);
+}

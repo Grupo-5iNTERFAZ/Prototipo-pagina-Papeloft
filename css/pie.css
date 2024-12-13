@@ -1,0 +1,175 @@
+/* Asegúrate de que el body ocupe todo el alto disponible */
+body {
+    display: flex;
+    flex-direction: column; /* Permite que los elementos hijos se coloquen en columna */
+    min-height: 100vh; /* Garantiza que el body ocupe al menos toda la altura de la ventana */
+    margin: 0;
+}
+
+/* Header y main */
+header {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 8px 11px rgba(15, 152, 150, 0.15);
+}
+
+main {
+    flex: 1; /* Esto hace que el contenido principal ocupe todo el espacio disponible */
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #9CAAF1; /* Color de fondo azul del footer */
+    padding: 50px 0;
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+
+}
+
+/* Contenedor del footer */
+footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px; /* Espacio entre las secciones */
+    width: 90%; /* Asegura que ocupe el 90% del ancho */
+    max-width: 1200px; /* Limita el ancho máximo */
+    text-align: center;
+}
+.footer-content{
+    text-align: center;
+    margin-top: 50px;
+}
+/* Sección de redes sociales */
+.social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre el título y los iconos */
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row; /* Colocamos los elementos en fila */
+    align-items: center; /* Centra los iconos */
+    gap: 15px; /* Espacio entre los iconos */
+    padding: 0; /* Asegura que no haya espacio extra alrededor */
+    list-style: none; /* Elimina cualquier estilo de lista (puntos, números, etc.) */
+}
+
+.social-title {
+    font-size: 1.9rem; /* Tamaño del texto */
+    color: #fff; /* Color del texto */
+    margin-bottom: 15px; /* Espacio debajo del texto */
+    margin-right: 15px;
+    font-family: 'fuenteencabezado';
+    font-weight: bold; /* Hacer el texto más destacado */
+}
+
+/* Estilo para los iconos */
+.social-icon {
+    font-size: 1.5rem; /* Tamaño del icono */
+    color: #fff; /* Color blanco por defecto */
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Efecto hover para los iconos */
+.social-icon:hover {
+    color: #F2295F;  /* Color cuando el cursor pasa por encima */
+}
+
+/* Sección de suscripción */
+.subscribe {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.subscribe h3 {
+    margin-bottom: 15px;
+    font-family: 'fuentecuerpo'; 
+    color: #ffffff;
+}
+
+.subscription-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.subscribe input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 15px;
+}
+
+.payment-icons img  {
+    
+    margin-right: 19px;
+}
+/* Cambiar tamaño de cada imagen por separado */
+.visa {
+    width: 55px; /* Tamaño de la imagen Visa */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+.paypal {
+    width: 100px; /* Tamaño de la imagen PayPal */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+.mastercard {
+    width: 65px; /* Tamaño de la imagen MasterCard */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+
+/* Sección de información del sitio */
+.site-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.site-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.site-info ul li {
+    margin-bottom: 10px;
+}
+
+.site-info p {
+    margin-top: 20px;
+}
+
+/* Estilo para los enlaces */
+.site-info ul li a {
+    color: #000000;  /* Color de los enlaces por defecto */
+    text-decoration: none;  /* Eliminar subrayado por defecto */
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Transición suave cuando cambia el color */
+}
+
+/* Estilo para los enlaces cuando el cursor pasa por encima */
+.site-info ul li a:hover {
+    color: #F2295F;  /* Cambiar el color al dorado cuando el cursor pasa por encima */
+}
+
+/* Estilos generales */
+footer .footer-content p {
+    color: #ffffff;
+}

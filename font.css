@@ -1,0 +1,42 @@
+/* Encabezado */
+@font-face {
+    font-family: 'fuenteencabezado';
+    src: url('font/Jua-Regular.ttf'); /* Se omite el formato, ya que los navegadores detectan el tipo automáticamente */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Cuerpo de la fuente */
+@font-face {
+    font-family: 'fuentecuerpo';
+    src: url('font/Junge-Regular.ttf'); /* Se omite el formato */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Texto común, párrafo */
+@font-face {
+    font-family: 'fuentetexto';
+    src: url('font/jura-3/Jura-Bold.ttf'); /* Asegúrate de que la ruta sea correcta */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Aplicar fuente al encabezado */
+body{
+    font-family: 'fuenteencabezado';
+}
+
+
+/* Cuerpo de la página */
+h1, h2, h3, h4, h5, h6  {
+    font-family: 'fuentecuerpo';
+}
+
+li, span { 
+    font-family: 'fuenteencabezado';
+}
+/* Texto común (párrafos, span, lista) */
+p { 
+    font-family: 'fuentetexto';
+}

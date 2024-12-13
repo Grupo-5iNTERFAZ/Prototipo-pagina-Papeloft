@@ -1,0 +1,193 @@
+/* Variables de color */
+:root { 
+    --white: #ffffff;
+    --pink: #F2295F;
+    --morado: #6404A5;
+    --azul: #9CAAF1; 
+    --black: #130f40;
+    --amarillo: #F2E205;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --border: .2rem solid rgba(0, 0, 0, .1);
+    --outline: .1rem solid rgba(0, 0, 0, .1);
+    --outline-hover: .2rem solid var(--black);
+}
+
+/* Contenedor de la sección */
+.carrito {
+    padding: 20px;
+    font-family: "fuentetexto";
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carrito a {
+    font-family: "fuentetexto";
+    color: #333; /* Color base del texto */
+    transition: color 0.3s ease; /* Transición para el cambio de color */
+    margin-bottom: 30px; /* Espacio adicional abajo del título */
+}
+
+.carrito span {
+    font-family: "fuentetexto";
+    color: #555; /* Color base del texto */
+    transition: color 0.3s ease; /* Transición para el cambio de color */
+}
+
+/* Hover para los textos de h2 */
+.carrito a:hover {
+    color: #ff6699; /* Cambia a un color llamativo */
+}
+
+/* Hover para span */
+.carrito span:hover {
+    color: #ff3366; /* Cambia a un color diferente */
+}
+
+/* Opciones generales */
+.opciones {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-family: "fuentetexto";
+}
+
+.opciones a {
+    font-family: "fuentetexto";
+}
+
+/* Contenedor de productos */
+.productos {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 400px; /* Espacio entre los productos */
+    justify-content: flex-start;
+    align-items: flex-start; /* Alinea los productos verticalmente */
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el checkbox al lado izquierdo */
+    width: 300px; /* Tamaño ajustado del contenedor */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fefefe;
+    margin-bottom: 20px; /* Espacio adicional debajo de cada producto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+}
+
+.producto img {
+    width: 50%; /* Tamaño adecuado para la imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.producto .info {
+    text-align: left; /* Alinea el texto dentro del contenedor del producto */
+    font-family: "fuentetexto";
+}
+
+.info p {
+    font-family: "fuentecuerpo";
+    color: var(--black);
+}
+
+.producto p {
+    margin: 5px 0;
+}
+
+/* Contenedor de botones de cantidad */
+.cantidad {
+    display: flex;
+    align-items: center; /* Alinea los botones de cantidad con los números */
+    gap: 5px; /* Espaciado entre los botones */
+    width: 60px; /* Anchura ajustada de la caja de cantidad */
+    justify-content: space-between; /* Alinea los elementos dentro del contenedor */
+}
+
+.cantidad button {
+    background-color: #ff5a7c;
+    color: #fff;
+    border: none;
+    border-radius: 3px; /* Reducción del radio de bordes */
+    padding: 2px 5px;
+    cursor: pointer;
+    font-size: 0.8rem; /* Disminución del tamaño de la fuente */
+    width: 25px; /* Anchura fija */
+    height: 25px; /* Altura fija */
+    font-family: "fuentecuerpo";
+}
+
+.cantidad input {
+    width: 25px; /* Anchura de la caja de cantidad */
+    text-align: center; /* Alinea el texto al centro */
+    border: 1px solid #ddd;
+    border-radius: 3px; /* Reducción del radio de bordes */
+    font-size: 0.8rem;
+    padding: 2px;
+}
+
+button {
+    background-color: #ff5a7c;
+    color: #fff;
+    border: none;
+    border-radius: 3px; /* Reducción del radio de bordes */
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8rem; /* Disminución del tamaño de la fuente */
+    width: auto; /* Ajusta el ancho automáticamente */
+    margin: 2px; /* Espaciado entre los botones */
+}
+
+button:hover {
+    background-color: var(--azul);
+}
+
+.eliminar, .verificar {
+    margin-top: 5px; /* Espaciado adicional */
+    width: auto; /* Anchura ajustable para el texto */
+    height: 25px; /* Altura fija más pequeña */
+    padding: 0 5px; /* Espaciado interno */
+    font-size: 0.8rem; /* Tamaño de fuente adecuado */
+    font-family: "fuenteencabezado";
+}
+
+.totales {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    text-align: right;
+}
+
+.finalizar-compra {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 20px;
+    font-family: "fuenteencabezado";
+}
+
+/* Hover para el botón verificar */
+.verificar button {
+    margin-top: 5px; /* Espaciado adicional */
+    width: auto; /* Anchura ajustable para el texto */
+    height: 25px; /* Altura fija más pequeña */
+    padding: 0 5px; /* Espaciado interno */
+    font-size: 0.8rem; /* Tamaño de fuente adecuado */
+    font-family: "fuenteencabezado";/
+}
+
+.verificar button:hover {
+    background-color: var(--azul); /* Color de fondo al pasar el mouse por encima */
+}

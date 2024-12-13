@@ -1,0 +1,206 @@
+/* Variables de color */
+:root { 
+    --white: #ffffff;
+    --pink: #F2295F;
+    --morado: #6404A5;
+    --azul: #9CAAF1; 
+    --black: #130f40;
+    --amarillo: #F2E205;
+    --light-color: #666;
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+    --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+    --outline-hover: 0.2rem solid var(--black);
+}
+
+/* Título de inicio */
+.titulo {
+    margin: 50px auto;
+    text-align: center;
+    color: var(--black);
+    font-size: 1.9rem;
+    font-family: "fuentecuerpo";
+}
+
+/* Contenedor principal de login */
+.login-container {
+    max-width: 900px; /* Ajusta el ancho */
+    margin: 50px auto; /* Centra el contenedor */
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center; /* Centra el contenido */
+    font-family: "fuentecuerpo";
+    margin-top: -40px;
+}
+
+/* Formulario */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%; /* Ancho completo */
+}
+
+.login-form label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--black);
+    text-align: left;
+    font-weight: bold;
+}
+
+.login-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    width: 500px; /* Ancho completo */
+    height: 44px; /* Ajusta el alto del campo de entrada */
+}
+
+/* Opciones del formulario */
+/* Opciones del formulario */
+.form-options {
+    display: flex; /* Disposición horizontal */
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    margin-left: 100px;
+}
+
+.form-options  {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    text-align: center; /* Centra el texto */
+}
+.form-options a{
+    font-family:"fuentecuerpo";
+    text-align: left; 
+}
+
+.form-options a:hover {
+    color: var(--pink);
+    text-decoration: underline;
+    
+}
+
+/* Botón */
+.btn {
+    background-color: var(--pink);
+    color: var(--white);
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ancho completo */
+    height: 44px; /* Alto del botón igual al campo de entrada */
+    font-family: "fuentetexto";
+}
+
+.btn:hover {
+    background-color: var(--azul);
+}
+
+/* Nuevo usuario */
+.new-account {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    text-align: center; /* Centra el texto */
+}
+
+.new-account a {
+    color: var(--pink);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.new-account a:hover {
+    text-decoration: underline;
+}
+
+/* Separador de redes sociales */
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--light-color);
+}
+
+.social-login div::before,
+.social-login div::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--light-color);
+}
+
+.social-login div span {
+    margin: 0 10px;
+    color: var(--light-color);
+}
+
+/* Botones de login */
+.login-boton {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--light-color); /* Agregado de borde */
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ancho completo */
+    height: 44px; /* Alto del botón igual al campo de entrada */
+    font-family: "fuentetexto";
+    margin-top: 30px;
+}
+
+.login-boton a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.login-boton a i {
+    font-size: 1.2rem;
+    margin-right: 8px; /* Ajusta el margen para mantener el icono alineado */
+}
+
+.login-boton:hover {
+    background-color: var(--morado);
+    color: var(--white);
+}
+.contrato{
+    margin-top: 25px;
+    justify-content: space-between;
+}
+.continuar{
+    font-size: 0.8rem;
+
+}
+.politicas{
+    font-size: 0.8rem;
+    color: #130f40;
+}
+.politicas :hover{
+    text-decoration: underline;
+    color: #6404A5;
+
+}
+

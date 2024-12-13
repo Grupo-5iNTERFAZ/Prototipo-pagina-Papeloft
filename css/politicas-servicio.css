@@ -1,0 +1,61 @@
+/* Variables de color */
+:root { 
+    --white: #ffffff;
+    --pink: #F2295F;
+    --morado: #6404A5;
+    --azul: #9CAAF1; 
+    --black: #130f40;
+    --amarillo:#F2E205;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --border: .2rem solid rgba(0, 0, 0, .1);
+    --outline: .1rem solid rgba(0, 0, 0, .1);
+    --outline-hover: .2rem solid var(--black);
+  }
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.politicas-servicio {
+    padding: 20px;
+}
+
+.texto {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.text {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--pink);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color:var(--morado)
+}

@@ -1,0 +1,65 @@
+:root {
+    --fondo-categoria: #C8CFF7; /* Color de fondo inicial */
+    --texto-categoria: #6404A5; /* Color del texto inicial */
+    --texto-hover: #ffffff; /* Color del texto al pasar el cursor */
+    --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+}
+
+/* Estilo del título */
+.titulo {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'fuentecuerpo';
+    color: #000000;
+    margin: 50px 0;
+    margin-bottom: 60px;
+}
+
+/* Contenedor de las categorías */
+.contenedor-categorias {
+    display: grid; /* Usar grid para organizar las categorías */
+    grid-template-columns: repeat(3, auto); /* Tres columnas */
+    gap: 10px 20px; /* Reducido para filas (10px) y columnas (20px) */
+    padding: 10px;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin-bottom: 20px;
+
+}
+
+/* Estilo de las categorías */
+.categoria {
+    background-color: var(--fondo-categoria);
+    color: var(--texto-categoria);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 25px; /* Espacio adicional debajo de cada categoría */
+    text-decoration: none; 
+
+}
+
+/* Efecto hover */
+.categoria:hover {
+    color: var(--texto-hover); /* Cambia el color del texto */
+    background-color: #ff5c8d; /* Cambia ligeramente el fondo al pasar el cursor */
+}
+
+/* Diseño responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .contenedor-categorias {
+        grid-template-columns: repeat(2, auto); /* Cambiar a 2 columnas en pantallas medianas */
+        gap: 15px 15px; /* Ajustar el espaciado en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-categorias {
+        grid-template-columns: 1fr; /* Cambiar a 1 columna en pantallas pequeñas */
+        gap: 10px; /* Espaciado entre filas */
+    }
+}

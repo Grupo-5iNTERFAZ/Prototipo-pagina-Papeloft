@@ -1,0 +1,251 @@
+
+/* Variables de color */
+:root { 
+    --white: #ffffff;
+    --pink: #F2295F;
+    --morado: #6404A5;
+    --azul: #9CAAF1; 
+    --black: #130f40;
+    --amarillo:#F2E205;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --border: .2rem solid rgba(0, 0, 0, .1);
+    --outline: .1rem solid rgba(0, 0, 0, .1);
+    --outline-hover: .2rem solid var(--black);
+  }
+/*tamaño que ocupa nuestro slider*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Estilos para el slider*/
+.slider-contenedor{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+/*<!-- Contenido del slider -->*/
+.slider-wrapper .slider-item{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+/* Estilo para el primer slider */
+.slider-wrapper .slider-item::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(20%);
+    background-size: cover;
+    background-position: center;
+    background-image: url("../image/principalimagen.png");
+    animation: zoom-background 10s infinite alternate ease-in-out;
+}
+
+/* Contenido del segundo slider (Pegatinas) */
+.slider-wrapper .slider-item:nth-child(2)::before {
+    background-image: url("../image/pegatinaimagen.png");
+}
+
+/* Contenido del tercer slider (Personaliza) */
+.slider-wrapper .slider-item:nth-child(3)::before {
+    background-image: url("../image/Personalizado.png");
+}
+
+/* Animación de zoom */
+@keyframes zoom-background {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1); /* Ajusta el valor para mayor o menor zoom */
+    }
+}
+
+
+.slider-wrapper .slider-item .slide-contenido{
+    color: var(--pink);
+    z-index: 20;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px 10px;
+    max-width: 1400px;
+    position: relative;
+}
+.slider-wrapper .slider-item .slide-contenido >*{
+    max-width: 30%;
+}
+
+/*subtitulos- Papeloft*/
+.slider-item .slide-contenido .slide-subtitulo{
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-family: "fuenteencabezado";
+    color: #F2295F;
+
+}
+/*titulo- Bienvenido a Papeloft*/
+.slider-item .slide-contenido .slide-titulo{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-family: "fuentecuerpo";
+    color:#F2295F;
+}
+
+
+/*descripcion- ¡Explora nuestra colección de papeloft y encuentra lo que necesitas para tu proyecto!*/
+.slider-item .slide-contenido .slide-descripcion{
+    margin-top: 25px;
+    line-height: 25px;
+    color: #6404A5;
+    font-size: 1rem;
+
+}
+/*boton- Explorar*/
+/* Estilo del botón */
+.slider-item .slide-contenido .slide-boton {
+    color: #ffffff;
+    width: 250px;
+    padding: 13px 0;
+    display: block;
+    margin-top: 45px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    transition: 0.5s ease; /* Transición para efectos suaves */
+}
+
+/* Efecto hover del botón */
+.slider-item .slide-contenido .slide-boton:hover {
+    color: #ffffff; /* Cambia el color del texto al hacer hover */
+    background: var(--morado); /* Cambia el fondo del botón */
+    border: 2px solid #130f40; /* Cambia el borde al color del texto */
+}
+
+/* Estilo para el controlador del slider */
+.slider-contenedor .slider-controlador {
+    position: absolute;
+    bottom: 45px;
+    z-index: 20;
+    width: 100%;
+}
+
+/* Estilo para la paginación del slider */
+.slider-controlador .slider-paginacion {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos de la paginación */
+    margin: 0 auto;
+    padding: 0 20px 10px;
+    max-width: 1400px;
+    list-style: none;
+}
+
+/* Indicador de la posición activa */
+.slider-paginacion .slider-inicio {
+    position: absolute;
+    bottom: 0;
+    transition: transform 0.3s ease, width 0.3s ease; /* Suaviza el movimiento y el cambio de tamaño */
+    transition: 0.4s ease-in-out;
+}
+.slider-inicio {
+    position: absolute;
+    height: 3px;
+    background-color: #007BFF;
+    transition: transform 0.3s, width 0.3s;
+}
+  
+
+/* Estilo para las pestañas de paginación */
+.slider-paginacion .slider-tab {
+    color: var(--azul);
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    border-bottom: 2px solid rgba(133, 133, 133, 0.3); /* Borde inicial */
+    transition: border-color 0.3s ease; /* Suaviza el cambio de color del borde */
+}
+
+/* Efecto al pasar el mouse sobre las pestañas */
+.slider-paginacion .slider-tab:hover {
+    border-color: #000000; /* Cambia el color del borde al pasar el mouse */
+}
+
+/* Estilo para la pestaña activa (opcional si hay clases dinámicas) */
+.slider-paginacion .slider-tab.active {
+    border-color: #F2295F;
+    font-weight: bold; /* Resalta la pestaña activa */
+}
+.slider-navegacion button {
+    position: absolute;
+    top: 74%;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    z-index: 20;
+    color:var(--morado);
+    border: none;
+    background:none;
+    transform: translateY(-50%);
+    transition: 0.2s ease;
+}
+.slider-navegacion button.swiper-button-disabled{
+    display: none;
+
+}
+
+.slider-navegacion button:hover {
+    background: #9CAAF1;
+}
+
+.slider-navegacion button#slider-prev {
+    left: 20px;
+}
+
+.slider-navegacion button#slider-next {
+    right: 20px;
+}
+
+@media (max-width: 1536px) {
+    .slider-wrapper .slider-item .slide-contenido, 
+    .slider-controlador .slider-paginacion {
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .slider-wrapper .slider-item .slide-contenido > * {
+        max-width: 66%;
+    }
+    .slider-wrapper .slider-item .slide-contenido .slider-controlador .slider-paginacion {
+        max-width: 100%;
+    }
+    .slider-navegacion button {
+        top: unset;
+        bottom: -15px;
+        background: none;
+    }
+    .slider-navegacion button:hover {
+        background: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-wrapper .slider-item .slide-contenido > * {
+        max-width: 100%;
+    }
+}
